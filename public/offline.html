@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CrisisNet - Offline</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", -apple-system, sans-serif;
+        background: linear-gradient(135deg, #0a0a0f 0%, #12121a 100%);
+        color: white;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+      }
+      .container {
+        max-width: 400px;
+      }
+      .icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, #00d9ff, #7c3aed);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .icon svg {
+        width: 40px;
+        height: 40px;
+      }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 16px;
+        background: rgba(239, 68, 68, 0.2);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        border-radius: 20px;
+        margin-bottom: 20px;
+      }
+      .status-dot {
+        width: 8px;
+        height: 8px;
+        background: #ef4444;
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+      p {
+        color: #8b8b8b;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+      .actions {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+      }
+      button {
+        padding: 12px 24px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .retry {
+        background: linear-gradient(135deg, #00d9ff, #7c3aed);
+        color: white;
+        border: none;
+      }
+      .retry:hover {
+        opacity: 0.9;
+      }
+      .cache {
+        background: transparent;
+        border: 1px solid #3a3a3a;
+        color: white;
+      }
+      .cache:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .mesh-info {
+        margin-top: 40px;
+        padding: 20px;
+        background: rgba(0, 217, 255, 0.1);
+        border: 1px solid rgba(0, 217, 255, 0.2);
+        border-radius: 15px;
+      }
+      .mesh-info h3 {
+        font-size: 14px;
+        color: #00d9ff;
+        margin-bottom: 10px;
+      }
+      .mesh-info p {
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+          <path
+            d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"
+          />
+        </svg>
+      </div>
+
+      <div class="status">
+        <div class="status-dot"></div>
+        <span>Offline Mode</span>
+      </div>
+
+      <h1>You're Offline</h1>
+      <p>
+        Don't worry! CrisisNet is designed to work without internet. Your
+        messages will be stored locally and sent when connection is restored.
+      </p>
+
+      <div class="actions">
+        <button class="retry" onclick="location.reload()">Try Again</button>
+        <button class="cache" onclick="openCachedVersion()">Use Cached</button>
+      </div>
+
+      <div class="mesh-info">
+        <h3>🛰️ Mesh Network Mode</h3>
+        <p>
+          In a real disaster scenario, CrisisNet would connect to nearby devices
+          via Bluetooth/WiFi to create a mesh network, enabling communication
+          without internet or cell towers.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function openCachedVersion() {
+        caches.open("crisisnet-v1").then((cache) => {
+          cache.match("/").then((response) => {
+            if (response) {
+              window.location.href = "/";
+            } else {
+              alert("No cached version available");
+            }
+          });
+        });
+      }
+
+      // Check for connection restoration
+      window.addEventListener("online", () => {
+        document.querySelector("h1").textContent = "Back Online!";
+        document.querySelector(".status-dot").style.background = "#10B981";
+        document.querySelector(".status span").textContent = "Connected";
+
+        setTimeout(() => location.reload(), 1000);
+      });
+    </script>
+  </body>
+</html>
