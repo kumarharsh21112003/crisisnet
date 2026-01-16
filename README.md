@@ -496,20 +496,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/Developer-Kumar_Harsh-00D9FF?style=for-the-badge&logo=dev.to&logoColor=white" alt="Developer">
-
-### Kumar Harsh
+### 🚀 Kumar Harsh
 
 <p>
   <a href="https://www.linkedin.com/in/kumar-harsh-99b4982b1/">
-    <img src="https://img.shields.io/badge/LinkedIn-Kumar_Harsh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/kumarharsh">
-    <img src="https://img.shields.io/badge/GitHub-kumarharsh-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    <img src="https://img.shields.io/badge/Connect_on-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
 </p>
 
-_Full Stack Developer | AI Enthusiast | Building for Impact_
+<p>
+  <strong>Full Stack Developer</strong> • <strong>AI/ML Enthusiast</strong> • <strong>Building for Impact</strong>
+</p>
+
+<sub>Passionate about creating technology that makes a difference in people's lives.</sub>
 
 </div>
 
@@ -520,15 +519,16 @@ _Full Stack Developer | AI Enthusiast | Building for Impact_
 ### 💖 Built with love for humanity's safety
 
 <p>
-  <img src="https://img.shields.io/badge/Made_with-Next.js-black?style=flat-square&logo=next.js" alt="Next.js">
-  <img src="https://img.shields.io/badge/Powered_by-AI-7C3AED?style=flat-square" alt="AI">
-  <img src="https://img.shields.io/badge/For-Humanity-red?style=flat-square&logo=heart" alt="Humanity">
+  <img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js" alt="Next.js">
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/AI_Powered-NLP-7C3AED?style=flat-square" alt="AI">
+  <img src="https://img.shields.io/badge/PWA-Ready-10B981?style=flat-square" alt="PWA">
 </p>
 
-**⭐ Star this repo if you find it useful!**
+---
 
-<p>
-  <sub>Made with ❤️ by <a href="https://www.linkedin.com/in/kumar-harsh-99b4982b1/">Kumar Harsh</a></sub>
-</p>
+⭐ **Star this repo if you find it useful!** ⭐
+
+<sub>© 2024 Kumar Harsh. All Rights Reserved.</sub>
 
 </div>
